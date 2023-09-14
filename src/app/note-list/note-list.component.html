@@ -1,0 +1,8 @@
+<div class="container shadow p-5 mb-5 mt-5 bg-body rounded w-50 m-auto">
+    <input type="text" [(ngModel)]="newNote" class="form-control shadow-none" placeholder="Enter Your Note..." />
+    <button (click)="addNote()" class="btn btn-dark mt-5 py-2 px-5 rounded-pill d-block position-relative fw-semibold start-50 translate-middle-x">Add new note</button>
+  </div>
+  <div *ngFor="let note of notes" class="container p-3 mb-2 bg-dark rounded text-white w-50 d-flex justify-content-around">
+    <span class="fw-semibold fs-4 mt-2">{{ note }}</span>
+    <button (click)="deleteNote(note)" class="btn btn-danger m-3 px-4">Delete</button>
+  </div>
